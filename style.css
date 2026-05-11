@@ -34,12 +34,21 @@ body{
   gap:10px;
 }
 
-.logo-circle{
-  width:18px;
-  height:18px;
-  border-radius:50%;
-  background:#00d084;
-  box-shadow:0 0 15px #00d084;
+/* 1. Remove or Comment out .logo-circle */
+/* .logo-circle { ... } */
+
+/* 2. Add these styles */
+.logo-img {
+  width: 26px;      /* Adjust based on your logo's proportions */
+  height: auto;
+  display: block;
+}
+
+.logo h2 {
+  font-size: 24px;   /* Adjusted to match the screenshot scale */
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-left: 8px;  /* Spacing between image and text */
 }
 
 .logo h2{
