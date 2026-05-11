@@ -52,3 +52,23 @@ workflowSteps.forEach((step, index) => {
   }, 1800 + index * 400);
 
 });
+// Simple chat typing animation simulation
+const chatBubbles = document.querySelectorAll('.chat-bubble');
+
+function animateChat() {
+    chatBubbles.forEach((bubble, index) => {
+        bubble.style.opacity = '0';
+        bubble.style.transform = 'translateY(10px)';
+        
+        setTimeout(() => {
+            bubble.style.transition = 'all 0.5s ease';
+            bubble.style.opacity = '1';
+            bubble.style.transform = 'translateY(0)';
+        }, 500 + (index * 1000));
+    });
+}
+
+// Run once on load
+animateChat();
+// Repeat every 5 seconds
+setInterval(animateChat, 5000);
