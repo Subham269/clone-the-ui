@@ -447,4 +447,351 @@ nav a:hover{
   .intelligence p{
     font-size:20px;
   }
+}/* ========================= */
+/* AI SECTION */
+/* ========================= */
+
+.ai-section{
+  background:#000;
+  padding:140px 80px;
+}
+
+.ai-heading{
+  text-align:center;
+  max-width:900px;
+  margin:auto;
+}
+
+.ai-heading h2{
+  font-size:76px;
+  font-weight:800;
+  line-height:1.1;
+  margin-bottom:30px;
+  letter-spacing:-3px;
+}
+
+.ai-heading p{
+  font-size:26px;
+  color:#9ca3af;
+  line-height:1.7;
+}
+
+/* cards */
+
+.ai-cards{
+  margin-top:90px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:35px;
+}
+
+/* individual card */
+
+.ai-card{
+  min-height:720px;
+  border-radius:34px;
+  border:1px solid rgba(255,255,255,0.08);
+  background:
+    linear-gradient(
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.02) 1px,
+      transparent 1px
+    ),
+    #020202;
+
+  background-size:40px 40px;
+
+  padding:40px;
+  position:relative;
+  overflow:hidden;
+}
+
+.ai-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(0,255,170,0.08),
+      transparent 60%
+    );
+  pointer-events:none;
+}
+
+.card-tag{
+  color:#23f0a6;
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.ai-card h3{
+  margin-top:30px;
+  font-size:58px;
+  line-height:1.1;
+  letter-spacing:-2px;
+}
+
+.ai-card p{
+  margin-top:28px;
+  max-width:620px;
+  font-size:20px;
+  line-height:1.7;
+  color:#b6bcc7;
+}
+
+/* ========================= */
+/* CARD 1 VISUAL */
+/* ========================= */
+
+.card-visual{
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  bottom:40px;
+  width:80%;
+  height:320px;
+}
+
+.floating-icon{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#1ee7a5;
+  position:absolute;
+  top:0;
+  left:10px;
+
+  animation:float 3s ease-in-out infinite;
+}
+
+.floating-icon::before{
+  content:"✦";
+  color:black;
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  font-size:24px;
+  font-weight:bold;
+}
+
+.browser-window{
+  width:100%;
+  height:230px;
+  background:#040404;
+  border-radius:24px;
+  border:1px solid rgba(255,255,255,0.06);
+
+  position:absolute;
+  bottom:0;
+  overflow:hidden;
+}
+
+.browser-top{
+  height:58px;
+  background:#1ee7a5;
+  display:flex;
+  align-items:center;
+  padding:0 20px;
+}
+
+.browser-search{
+  width:120px;
+  height:18px;
+  border-radius:999px;
+  background:rgba(0,0,0,0.35);
+}
+
+.browser-content{
+  width:90%;
+  height:55px;
+  border-radius:18px;
+  background:#111;
+  margin:30px auto;
+}
+
+.copy-btn{
+  position:absolute;
+  bottom:18px;
+  left:50%;
+  transform:translateX(-50%);
+
+  background:#0d0d0d;
+  color:white;
+  border:1px solid rgba(255,255,255,0.15);
+
+  padding:12px 20px;
+  border-radius:14px;
+
+  font-weight:700;
+  cursor:pointer;
+}
+
+/* ========================= */
+/* CARD 2 VISUAL */
+/* ========================= */
+
+.workflow{
+  position:absolute;
+  bottom:90px;
+  left:50%;
+  transform:translateX(-50%);
+
+  width:80%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.workflow-line{
+  position:absolute;
+  top:50%;
+  left:0;
+  width:100%;
+  height:2px;
+  background:rgba(255,255,255,0.08);
+  z-index:0;
+}
+
+.workflow-step{
+  width:90px;
+  height:90px;
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:40px;
+  font-weight:700;
+
+  position:relative;
+  z-index:2;
+}
+
+.workflow-step.active{
+  background:#1ee7a5;
+  color:black;
+
+  box-shadow:
+    0 0 0 10px rgba(30,231,165,0.08),
+    0 0 30px rgba(30,231,165,0.25);
+}
+
+.workflow-step.sparkle{
+  background:#1ee7a5;
+  color:black;
+}
+
+.workflow-step.loading{
+  border:2px dashed rgba(255,255,255,0.12);
+  position:relative;
+}
+
+.workflow-step.loading::before{
+  content:"";
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:3px solid #1ee7a5;
+  border-top-color:transparent;
+
+  animation:spin 1s linear infinite;
+}
+
+/* animations */
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(360deg);
+  }
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+/* ========================= */
+/* RESPONSIVE */
+/* ========================= */
+
+@media(max-width:1200px){
+
+  .ai-heading h2{
+    font-size:58px;
+  }
+
+  .ai-card h3{
+    font-size:44px;
+  }
+}
+
+@media(max-width:900px){
+
+  .ai-section{
+    padding:100px 24px;
+  }
+
+  .ai-cards{
+    grid-template-columns:1fr;
+  }
+
+  .ai-heading h2{
+    font-size:44px;
+  }
+
+  .ai-heading p{
+    font-size:18px;
+  }
+
+  .ai-card{
+    min-height:640px;
+  }
+
+  .workflow-step{
+    width:70px;
+    height:70px;
+    font-size:28px;
+  }
+}
+/* ADD THIS ALSO */
+
+.pulse{
+  animation:pulseAnim 0.8s ease;
+}
+
+@keyframes pulseAnim{
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.12);
+  }
+
+  100%{
+    transform:scale(1);
+  }
 }

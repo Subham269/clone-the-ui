@@ -33,3 +33,22 @@ cards.forEach(card => {
   });
 
 });
+// ADD THIS IN script.js
+
+// workflow pulse animation
+
+const workflowSteps = document.querySelectorAll(".workflow-step.active");
+
+workflowSteps.forEach((step, index) => {
+
+  setInterval(() => {
+
+    step.classList.add("pulse");
+
+    setTimeout(() => {
+      step.classList.remove("pulse");
+    }, 800);
+
+  }, 1800 + index * 400);
+
+});
